@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>shirts</title>
     <style>
         body {
@@ -37,107 +38,156 @@
             margin-left: auto;
             margin-right: auto;
         }
+        #cart-link {
+             margin-left: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
         
     </style>
 </head>
 <body>
     <br>
-   
+
+    <a href="mens.html"><i class='bx bx-left-arrow-alt'style="font-size: 2em;"></i></a>
 
     <center>
         <form action="">
             <input type="number" placeholder="min" id="min">
             <input type="number" placeholder="max" id="max">
             <input type="button" value="filter" class="sub">
+            <a href="cart.html" target="_blank"  id="cart-link">View Cart (<span id="cart-count">0</span>)</a>
         </form></center><br>
     <div class="main">
         <div class="card" data-value="1500">
             <img src="https://m.media-amazon.com/images/I/71-7DSEJ2QL._AC_UL480_FMwebp_QL65_.jpg" alt="" >
             <p>Brand: USPA</p>
             <p data-value="1500">price:1500</p><br>
-            <button class="btn btn-primary" onclick="addToCart(1500)">Add to Cart</button>
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>
         </div>
         <div class="card" data-value="1700">
             <img src="https://m.media-amazon.com/images/I/71GZY-u4yQL._AC_UL480_FMwebp_QL65_.jpg" alt="">
             <p>Brand:  Polo</p>
             <p data-value="1700">price:1700</p>
-            <button class="btn btn-primary" onclick="addToCart(1700)">Add to Cart</button>
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>
         </div>
         <div class="card" data-value="1900">
             <img src="https://m.media-amazon.com/images/I/61H9VaZJOJL._AC_UL480_FMwebp_QL65_.jpg" alt="">
             <p>Brand: Mufti</p>
             <p data-value="1900">price:1900</p>
-            <button class="btn btn-primary" onclick="addToCart(1900)">Add to Cart</button>   
+            <button class="btn btn-primary add-to-cart" >Add to Cart</button>   
         </div>
         <div class="card" data-value="2200">
             <img src="https://m.media-amazon.com/images/I/81jWbl0s1LL._AC_UL480_FMwebp_QL65_.jpg" alt="">
             <p>Brand:  Allen Solly</p>
             <p data-value="2200">price:2200</p>
-            <button class="btn btn-primary" onclick="addToCart(2200)">Add to Cart</button>        
+            <button class="btn btn-primary add-to-cart" >Add to Cart</button>        
         </div>
         <div class="card" data-value="1500">
             <img src="https://m.media-amazon.com/images/I/71Ie8ZLyxHL._AC_UL480_FMwebp_QL65_.jpg" alt="">
             <p>Brand: Allen Solly</p>
             <p data-value="1500">price:1500</p>
-            <button class="btn btn-primary"  onclick="addToCart(1500)">Add to Cart</button>      
+            <button class="btn btn-primary add-to-cart"  >Add to Cart</button>      
         </div>
         <div class="card" data-value="1700">
             <img src="https://m.media-amazon.com/images/I/610xANr-UqL._AC_UL480_FMwebp_QL65_.jpg" alt="">
             <p>Brand: Mufti </p>
             <p data-value="1700">price:1700</p>
-            <button class="btn btn-primary"onclick="addToCart(1700)">Add to Cart</button>          
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>          
         </div>
         <div class="card" data-value="2000">
             <img src="https://m.media-amazon.com/images/I/61S9CTB9g+L._AC_UL480_FMwebp_QL65_.jpg" alt="">
             <p>Brand: USPA</p>
             <p data-value="2000">price:2000</p>
-            <button class="btn btn-primary"onclick="addToCart(2000)">Add to Cart</button>          
+            <button class="btn btn-primary add-to-cart">Add to Cart</button>          
         </div>
         <div class="card" data-value="2000">
             <img src="https://m.media-amazon.com/images/I/710Rl2zN0JL._AC_UL480_FMwebp_QL65_.jpg" alt="">
             <p>Brand: USPA</p>
             <p data-value="2000">price:2000</p>
-            <button class="btn btn-primary" onclick="addToCart(2000)">Add to Cart</button>          
+            <button class="btn btn-primary add-to-cart" >Add to Cart</button>          
         </div>
         <div class="card" data-value="1199">
             <img src="https://m.media-amazon.com/images/I/611FfvNGfKL._AC_UL480_FMwebp_QL65_.jpg" alt="">
             <p>Brand: USPA</p>
             <p data-value="1199">price:1199</p>
-            <button class="btn btn-primary"onclick="addToCart(1199)" >Add to Cart</button>         
+            <button class="btn btn-primary add-to-cart" >Add to Cart</button>         
         </div>
         <div class="card" data-value="1300">
             <img src="https://assets.ajio.com/medias/sys_master/root/20240712/FHvR/66905aec6f60443f31eba9f4/-473Wx593H-700183905-pink-MODEL.jpg" alt="">
             <p>Brand: Peter Englnad</p>
             <p data-value="1300">price:1300</p>
-            <button class="btn btn-primary" onclick="addToCart(1300)">Add to Cart</button>        
+            <button class="btn btn-primary add-to-cart" >Add to Cart</button>        
         </div>
         <div class="card" data-value="2000">
             <img src="https://assets.ajio.com/medias/sys_master/root/20230728/z0gS/64c3c87deebac147fc92977e/-473Wx593H-469095752-navy-MODEL.jpg" alt="">
             <p>Brand:  Denim</p>
             <p data-value="2000">price:2000</p>
-            <button class="btn btn-primary" onclick="addToCart(2000)">Add to Cart</button>         
+            <button class="btn btn-primary add-to-cart" >Add to Cart</button>         
         </div>
         <div class="card" data-value="1600">
             <img src="https://assets.ajio.com/medias/sys_master/root/20230215/0Qxa/63ed0925f997dde6f4aad5ad/-473Wx593H-469448037-beige-MODEL.jpg" alt="">
             <p>Brand:  Mufti</p>
             <p data-value="1600">price:1600</p>
-            <button class="btn btn-primary"  onclick="addToCart(1600)">Add to Cart</button>       
+            <button class="btn btn-primary add-to-cart"  >Add to Cart</button>       
         </div>
         <div class="card" data-value="1400">
             <img src="https://assets.ajio.com/medias/sys_master/root/20240712/FHvR/66905aec6f60443f31eba9f4/-473Wx593H-700183905-pink-MODEL.jpg" alt="">
             <p>Brand: Mufti</p>
             <p data-value="1400">price:1400</p>
-            <button class="btn btn-primary" onclick="addToCart(1400)">Add to Cart</button>       
+            <button class="btn btn-primary add-to-cart" >Add to Cart</button>       
         </div>
     </div>
 
     <script>
-        let cartTotal = 0;
+       // Get the cart from localStorage or initialize an empty object
+        let cart = JSON.parse(localStorage.getItem('cart')) || {};
 
-        function addToCart(price) {
-            cartTotal += price; // Add the price of the shirt to the total
-            alert(`Added to cart: Price = ${price}. Total cart value = ${cartTotal}`);
-        }
+    // Function to update the cart count in the header
+    function updateCartCount() {
+         const cartCount = Object.keys(cart).reduce((sum, productId) => sum + cart[productId].quantity, 0);
+         document.getElementById('cart-count').textContent = cartCount;
+    }
+
+    // Function to add products to the cart
+    function addToCart(productElement) {
+        const productId = productElement.dataset.value; // Assuming unique price for now, change to id if available
+        const productName = productElement.querySelector("p").textContent; // First <p> in the card is the brand name
+        const productPrice = parseFloat(productElement.querySelector("[data-value]").dataset.value); // Extract price
+        const productImage = productElement.querySelector('img').src;
+
+    // If product is already in the cart, increase its quantity
+    if (cart[productId]) {
+        cart[productId].quantity += 1;
+    } else {
+        // Add new product to the cart
+        cart[productId] = {
+            name: productName,
+            price: productPrice,
+            image: productImage,
+            quantity: 1
+        };
+    }
+
+    // Save the updated cart to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Update the cart count in the header
+    updateCartCount();
+}
+
+// Add event listeners to all "Add to Cart" buttons
+document.querySelectorAll('.btn-primary').forEach(button => {
+    button.addEventListener('click', function () {
+        const productElement = this.closest('.card');
+        addToCart(productElement);
+    });
+});
+
+// Update the cart count on page load
+updateCartCount();
+
 
         document.querySelector(".sub").addEventListener('click',function(){
             let y = +document.getElementById("min").value;
