@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Transactions</title>
+    <style>
+        body{
+            background-image: url("https://images.unsplash.com/photo-1710162734135-8dc148f53abe?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+         .home-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px; /* Space between h1 and image */
+            margin-top: 20px;
+        }
+
+        .home-container img {
+            height: 80px;
+            width: 80px;
+        }
+
+
+        .main{
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .col-lg-4,
+        .col-md-6 {
+            background-color: aquamarine;
+            flex: 1;
+            margin: 90px 10px;
+            border: 2px solid black;
+            white-space: nowrap; /* Prevents text from wrapping */
+            overflow: hidden; /* Optional: Hides overflow if text is too long */
+            text-overflow: ellipsis; /* Optional: Adds "..." at the end if text overflows */
+        }
+        .col-lg-4:hover,
+        .col-md-6:hover {
+             background-color: aqua; /* Change background color */
+             transform: scale(1.05);      /* Scale the element slightly */
+             transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+             cursor: pointer;             /* Change cursor to indicate it's clickable */
+        }
+        h1{
+            color: black;
+        }
+        .home h1{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="home">
+            <div class="home-container">
+                <h1 style="font-size:5vw">SBI Bank</h1>
+                <img src="https://i.pinimg.com/originals/38/9f/84/389f8455e593d335da016cde6a183c2f.png" alt="SBI Bank Logo">
+            </div>
+    </div><br><br><br>
+    <div class="main">
+    <div class="container">
+        <div class="row">
+         <div class="col-lg-4 col-md-6 col-sm-12 p-5">
+                <h1>Account Details</h1>
+                <button class="btn btn-primary btn-outline-light" onclick="add()">Click</button>
+         </div>
+
+         <div class="col-lg-4 col-md-6 col-sm-12 p-5">
+              <h1>Debit Amount</h1>
+              <button  class="btn btn-primary btn-outline-light" onclick="deb()">Click</button>
+         </div>
+
+         <div class="col-lg-4 col-md-6 col-sm-12 p-5">
+             <h1>Credit Amount</h1>
+             <button  class="btn btn-primary btn-outline-light" onclick="cre()">Click</button>
+          </div>
+         </div>
+    </div>
+    </div>
+
+
+    <script>
+        function add(){
+            let pin = +prompt("Enetr pin number");
+            if(pin == 1234){
+                location.href = "acc.html"
+            }
+            else{
+                alert("Invalid pin number")
+            }
+
+        }
+        function deb(){
+            let pin = +prompt("Enetr pin number");
+            if(pin == 5678){
+                location.href = "deb.html"
+            }
+            else{
+                alert("Invalid pin number")
+            }
+
+        }
+        function cre(){
+            let pin = +prompt("Enetr pin number");
+            if(pin == 1122){
+                location.href = "credit.html"
+            }
+            else{
+                alert("Invalid pin number")
+            }
+
+        }
+    </script>
+</body>
+</html>
